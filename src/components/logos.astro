@@ -1,18 +1,82 @@
 ---
-// @ts-ignore
-import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import academyLogo from "../assets/client-logos/academy.svg";
+import cambridgeLogo from "../assets/client-logos/cambridge.svg";
+import edinburghLogo from "../assets/client-logos/edinburgh.svg";
+import positLogo from "../assets/client-logos/posit.svg";
+import robloxLogo from "../assets/client-logos/roblox.svg";
+import wikimediaLogo from "../assets/client-logos/wikimedia.svg";
 ---
-
-<div class="mt-24">
-  <h2 class="text-center text-slate-500">Works with your technologies</h2>
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-
-    <Icon class="size-8 md:size-12" name="simple-icons:react" />
-    <Icon class="size-8 md:size-12" name="simple-icons:svelte" />
-    <Icon class="size-8 md:size-12" name="simple-icons:astro" />
-    <Icon class="size-8 md:size-16" name="simple-icons:tailwindcss" />
-    <Icon class="size-8 md:size-16" name="simple-icons:alpinedotjs" />
-    <Icon class="size-8 md:size-12" name="simple-icons:vercel" />
-
+<main
+  class="pb-24">    
+<div class="mt-16  md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Trusted by world-leading organizations
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    We work with enterprises, universities, trade associations, non-profits, startups and local businesses across the Americas, Europe, Africa and Asia.
+  </p>
+</div>
+    
+    <div class="swiper logo-carousel mt-10">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="bg-slate-50 p-1 flex items-center justify-center rounded-lg">
+            <Image src={academyLogo} alt="Academy Logo" class="h-24 w-24 md:h-40 md:w-40" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-slate-50 p-1 flex items-center justify-center rounded-lg">
+            <Image src={cambridgeLogo} alt="Cambridge Logo" class="h-24 w-24 md:h-40 md:w-40" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-slate-50 p-1 flex items-center justify-center rounded-lg">
+            <Image src={edinburghLogo} alt="Edinburgh Logo" class="h-24 w-24 md:h-40 md:w-40" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-slate-50 p-1 flex items-center justify-center rounded-lg">
+            <Image src={positLogo} alt="Posit Logo" class="h-24 w-24 md:h-40 md:w-40" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-slate-50 p-1 flex items-center justify-center rounded-lg">
+            <Image src={robloxLogo} alt="Roblox Logo" class="h-24 w-24 md:h-40 md:w-40" />
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-slate-50 p-1 flex items-center justify-center rounded-lg">
+            <Image src={wikimediaLogo} alt="Wikimedia Logo" class="h-24 w-24 md:h-40 md:w-40" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+</main>
+
+<script>
+  import Swiper from 'swiper';
+  import { Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+
+  new Swiper('.logo-carousel', {
+    modules: [Autoplay],
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
+  });
+</script>

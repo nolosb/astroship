@@ -5,12 +5,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          "Bricolage Grotesque Variable",
-          "Inter Variable",
-          "Inter",
-          ...defaultTheme.fontFamily.sans,
-        ],
+        sans: ["Roboto Variable", "Roboto", ...defaultTheme.fontFamily.sans],
+      },
+      backgroundImage: {
+        hero: "url('../src/assets/hero.png')",
       },
     },
   },
