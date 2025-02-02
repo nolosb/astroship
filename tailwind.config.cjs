@@ -5,12 +5,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto Variable", "Roboto", ...defaultTheme.fontFamily.sans],
+        sans: ["Rubik", "Roboto", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         hero: "url('../src/assets/hero.png')",
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography")]
 };

@@ -1,26 +1,18 @@
 ---
 import Container from "@components/container.astro";
+import { Picture } from "astro:assets";
 import Link from "@components/ui/link.astro";
+import logo from "assets/logo.png";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
-const menuitems = [
+const menuitems = [     
   {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
-  },
-  {
-    title: "Pricing",
+    title: "Plans",
     path: "/pricing",
   },
   {
-    title: "About",
+    title: "Team",
     path: "/about",
   },
   {
@@ -29,12 +21,8 @@ const menuitems = [
   },
   {
     title: "Contact",
-    path: "/contact",
-  },
-  {
-    title: "Pro Version",
     badge: true,
-    path: "https://astroship-pro.web3templates.com/",
+    path: "/contact",
   },
 ];
 ---
@@ -43,8 +31,9 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-indigo-800">Pavilion</span>
+        <a href="/" class="flex items-center gap-2 text-lg">
+          <Picture src={logo} alt="Pavilion" class="h-10 w-10" />
+          <span class="font-medium">Pavilion</span>
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -52,34 +41,29 @@ const menuitems = [
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
-          {
-            menuitems.map((item, index) => (
-              <>
-                {item.children && (
-                  <Dropdown
-                    title={item.title}
-                    children={item.children}
-                    lastItem={index === menuitems.length - 1}
-                  />
-                )}
-
-                {!item.children && (
-                  <li>
-                    <a
-                      href={item.path}
-                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
-                      <span> {item.title}</span>
-                      {item.badge && (
-                        <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
-                          New
-                        </span>
-                      )}
-                    </a>
-                  </li>
-                )}
-              </>
-            ))
-          }
+          <li>
+            <a href="/pricing" class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+              <span>Plans</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about" class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+              <span>Team</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog" class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+              <span>Blog</span>
+            </a>
+          </li>
+          <li>
+            <a href="/contact" class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+              <span>Contact</span>
+              <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
+                New
+              </span>
+            </a>
+          </li>
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
           <Link href="#" style="muted" block size="md">Log in</Link>
