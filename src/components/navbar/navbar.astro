@@ -5,7 +5,7 @@ import Link from "@components/ui/link.astro";
 import logo from "assets/logo.png";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-
+import { Icon } from "astro-icon/components";
 const menuitems = [     
   {
     title: "Plans",
@@ -74,8 +74,16 @@ const menuitems = [
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
+        <Link
+        size="lg"
+        style="outline"
+        class="border-none text-indigo-700 flex gap-1 items-center justify-center"
+        href="https://coop.pavilion.tech"
+        target="_blank"
+        rel="noopener">
+         Coop
+         <Icon class="text-indigo-700 w-4 h-4" name="bx:link-external" />
+      </Link>
       </div>
     </div>
   </header>
