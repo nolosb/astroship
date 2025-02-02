@@ -12,5 +12,12 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")]
+  plugins: [
+    require("@tailwindcss/typography"),
+    function ({ addBase }) {
+      addBase({
+        html: { scrollBehavior: "smooth" },
+      });
+    },
+  ],
 };
