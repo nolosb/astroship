@@ -17,12 +17,12 @@ importers:
       '@astrojs/tailwind':
         specifier: ^6.0.0
         version: 6.0.0(astro@5.2.3(@types/node@20.12.12)(jiti@1.21.0)(rollup@4.34.0)(typescript@5.4.5)(yaml@2.4.2))(tailwindcss@3.4.3)
-      '@fontsource-variable/bricolage-grotesque':
-        specifier: ^5.0.6
-        version: 5.0.6
       '@fontsource-variable/inter':
         specifier: ^5.0.18
         version: 5.0.18
+      '@fontsource/rubik':
+        specifier: ^5.1.1
+        version: 5.1.1
       '@iconify-json/bx':
         specifier: ^1.1.10
         version: 1.1.10
@@ -313,11 +313,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/bricolage-grotesque@5.0.6':
-    resolution: {integrity: sha512-vA/FxigkyVJ5s1La0iseED268UPdDfvb9HcCn+pivWsrVcZoPtyNvu3/IGB+l6NvgZP4YuwCEtB7ViyKgc3isg==}
-
   '@fontsource-variable/inter@5.0.18':
     resolution: {integrity: sha512-rJzSrtJ3b7djiGFvRuTe6stDfbYJGhdQSfn2SI2WfXviee7Er0yKAHE5u7FU7OWVQQQ1x3+cxdmx9NdiAkcrcA==}
+
+  '@fontsource/rubik@5.1.1':
+    resolution: {integrity: sha512-g5H+vzDxwTxUBtEpPoNNF3uVZkqIvrXnYn0S8aQZNz1r2LMfpT0o/pnWr43hVumapVpm0CsT4xvH2Mw9LHnGqQ==}
 
   '@iconify-json/bx@1.1.10':
     resolution: {integrity: sha512-4JzMDYhs/hkU9mO8nNMNKZwHn706oQaD46URyUuD4fP/XAWGf01vg6wKITmQseEHsHDrtKAXjwcumfnTUDi3OQ==}
@@ -2838,9 +2838,9 @@ snapshots:
   '@esbuild/win32-x64@0.24.2':
     optional: true
 
-  '@fontsource-variable/bricolage-grotesque@5.0.6': {}
-
   '@fontsource-variable/inter@5.0.18': {}
+
+  '@fontsource/rubik@5.1.1': {}
 
   '@iconify-json/bx@1.1.10':
     dependencies:

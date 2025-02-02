@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Rubik", "Roboto", ...defaultTheme.fontFamily.sans],
+        sans: ["Rubik", ...defaultTheme.fontFamily.sans],
+        headings: ["Switzer", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         hero: "url('../src/assets/hero.png')",
@@ -16,7 +17,14 @@ module.exports = {
     require("@tailwindcss/typography"),
     function ({ addBase }) {
       addBase({
-        html: { scrollBehavior: "smooth" },
+        html: { 
+          scrollBehavior: "smooth",
+          fontFamily: "Rubik, sans-serif",
+        },
+        'h1, h2, h3, h4, h5, h6': {
+          fontFamily: "Switzer, sans-serif",
+          fontWeight: "600",
+        },
       });
     },
   ],

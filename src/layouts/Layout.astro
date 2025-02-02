@@ -2,9 +2,10 @@
 import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
+import "@fontsource/rubik"
 
 export interface Props {
-  title: string;
+title: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -51,6 +52,7 @@ const makeTitle = title
         },
       }}
     />
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
   </head>
   <body>
     <Navbar />
