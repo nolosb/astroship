@@ -17,11 +17,11 @@ module.exports = {
     require("@tailwindcss/typography"),
     function ({ addBase }) {
       addBase({
-        html: { 
+        html: {
           scrollBehavior: "smooth",
           fontFamily: "Rubik, sans-serif",
         },
-        'h1, h2, h3, h4, h5, h6': {
+        "h1, h2, h3, h4, h5, h6": {
           fontFamily: "Switzer, sans-serif",
           fontWeight: "600",
         },
